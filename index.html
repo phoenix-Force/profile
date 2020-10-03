@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Fruktur|Jolly+Lodger|Pacifico|Ravi+Prakash|UnifrakturMaguntia&display=swap');
+.container{
+  display: flex;
+  height:100vh;
+  width:100vw;
+  background-color:black;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  height:250px;
+  width:400px;
+  border-radius:15px;
+  background-color:gold;
+  background: #392618;
+  background: -moz-linear-gradient(left, #392618 0%, #533720 50%, #6F4828 100%);
+  background: -webkit-linear-gradient(left, #392618 0%, #533720 50%, #6F4828 100%);
+  background: linear-gradient(to right, #392618 0%, #533720 50%, #6F4828 100%);
+  color:#f1ead7;
+  transform-style: preserve-3d;
+  transform: perspective(400px);
+}
+.card .back {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.c{
+  width:100%;
+  height:30%;
+}
+.s1{
+  height:10px;
+  width:22%;
+  overflow: hidden;
+  background-color:black;
+  /* background: #780000;
+background: -moz-linear-gradient(45deg, #780000 0%, #A44222 50%, #664c1c 100%);
+background: -webkit-linear-gradient(45deg, #780000 0%, #A44222 50%, #664c1c 100%);
+background: linear-gradient(45deg, #780000 0%, #A44222 50%, #664c1c 100%); */
+}
+.s2{
+  height:10px;
+  width:22%;
+  overflow: hidden;
+  background-color:black;
+  /* background: #664C1C; */
+/* background: -moz-linear-gradient(45deg, rgb(117, 87, 32) 0%, #A44222 50%, #780000 100%);
+background: -webkit-linear-gradient(45deg, #664C1C 0%, #A44222 50%, #780000 100%);
+background: linear-gradient(45deg, #664C1C 0%, #A44222 50%, #780000 100%); */
+}
+.stripe1{
+  z-index:55;
+  left:84px;
+  bottom:116px;
+    position: relative;;
+    top:50;
+    background-color:black;
+    -moz-transform: scale(1.2) rotate(39deg) translate(-16px, -1px) skew(-8deg, -64deg);
+-webkit-transform: scale(1.2) rotate(39deg) translate(-16px, -1px) skew(-8deg, -64deg);
+-o-transform: scale(1.2) rotate(39deg) translate(-16px, -1px) skew(-8deg, -64deg);
+-ms-transform: scale(1.2) rotate(39deg) translate(-16px, -1px) skew(-8deg, -64deg);
+transform: scale(1.2) rotate(39deg) translate(-16px, -1px) skew(-8deg, -64deg);
+
+}
+h1{
+  font-family:Jolly Lodger;
+  color:#ffffffbe;
+  font-weight: normal;
+  text-align:right;
+  margin-right:15%;
+  letter-spacing: 2px;
+  font-size:35px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+   
+}
+.image_container{
+    height:80px;
+    width:80px;
+    margin-top:10px;
+    margin-left:10px;
+}
+.img{
+  height:100%;
+  width:100%;
+  z-index:99999;
+  overflow: hidden;
+  border-radius:10px;
+}
+h1:hover {
+   text-shadow: 
+  .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8, 
+  .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757,
+  .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757,
+  .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757, 
+  .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b, 
+  .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b,
+  .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+.SocialContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.fa {
+  font-size: 35px;
+  width: 50px;
+  height:50px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa-facebook{
+    color:#3b5998;
+    /* box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.788); */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+
+    
+}
+.fa-twitter{
+    color:#00acee;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+.fa-envelope{
+    color:white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+.fa-linkedin{
+    color:#0e76a8;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+.fa-youtube-play{
+    color:#c4302b;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+.fa-instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+  
+}
+.fa-github {
+    color:#211F1F;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+      <div class="card">
+        <div class="front">
+          <div class="image_container c">
+            <img class="img" src="https://d00x.s3.ap-south-1.amazonaws.com/pic.jpg" alt="">
+          </div>
+          <div class="nameContainer">
+            <h1>Manjarul Hoque</h1>
+          </div>
+          <div class="stripe1 s1">
+          </div>
+          <div class="stripe1 s2">
+          </div>
+          <div class="SocialContainer c">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <!-- <a href="#" class="fa fa-envelope"></a> -->
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube-play"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-github"></a>
+          </div>
+        </div>
+        <div class="back">
+        </div>
+        </div>
+      </div>
+</body>
+</html>
